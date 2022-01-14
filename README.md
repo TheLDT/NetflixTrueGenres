@@ -3,4 +3,4 @@
 
 ## Screenshots
 
-![Homepage](./screenshots/Homepage.png "Homepage")
+![Homepage](./screenshots/homepage.png "Homepage")
