@@ -62,7 +62,8 @@ readTextFile("netflixgenres.json", function (text) {
       let sublink = document.createElement("a");
       sublink.className = "sub-genre";
       sublink.target = "_blank";
-      sublink.text = subarr["genre"];
+
+      sublink.text = (subarr["emoji"] || "") + " " + subarr["genre"];
       sublink.href = nfLink + subarr["id"];
       sublistitem.appendChild(sublink);
       sublist.appendChild(sublistitem);
@@ -82,15 +83,17 @@ readTextFile("netflixgenres.json", function (text) {
   let header = document.querySelector(".header");
   let genres = document.querySelector(".genres");
 
-  fitStatic(header, genres, staticdiv)
+  fitStatic(header, genres, staticdiv);
   window.onresize = (e) => {
+    console.log("ye");
     staticdiv.style.height = 100 + "%";
-    fitStatic(header, genres, staticdiv)
+    fitStatic(header, genres, staticdiv);
   };
 });
 
-function fitStatic(header, genres, staticdiv){
+function fitStatic(header, genres, staticdiv) {
   if (header.offsetHeight + genres.offsetHeight > staticdiv.offsetHeight) {
-    staticdiv.style.height = staticdiv.offsetHeight + genres.offsetHeight + "px";
+    staticdiv.style.height =
+      staticdiv.offsetHeight + genres.offsetHeight + "px";
   }
 }
