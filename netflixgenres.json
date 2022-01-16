@@ -476,17 +476,17 @@
         {
           "genre": "Australian Movies",
           "id": 5230,
-          "emoji":"🇦🇺"
+          "emoji": "🇦🇺"
         },
         {
           "genre": "Belgian Movies",
           "id": 262,
-          "emoji":"🇧🇪"
+          "emoji": "🇧🇪"
         },
         {
           "genre": "British Movies",
           "id": 10757,
-          "emoji":"🇬🇧"
+          "emoji": "🇬🇧"
         },
         {
           "genre": "Classic Foreign Movies",
@@ -495,12 +495,12 @@
         {
           "genre": "Chinese Movies",
           "id": 3960,
-          "emoji":"🇨🇳"
+          "emoji": "🇨🇳"
         },
         {
           "genre": "Dutch Movies",
           "id": 10606,
-          "emoji":"🇳🇱"
+          "emoji": "🇳🇱"
         },
         {
           "genre": "Eastern European Movies",
@@ -545,37 +545,37 @@
         {
           "genre": "German Movies",
           "id": 58886,
-          "emoji":"🇩🇪"
+          "emoji": "🇩🇪"
         },
         {
           "genre": "Greek Movies",
           "id": 61115,
-          "emoji":"🇬🇷"
+          "emoji": "🇬🇷"
         },
         {
           "genre": "Indian Movies",
           "id": 10463,
-          "emoji":"🇮🇳"
+          "emoji": "🇮🇳"
         },
         {
           "genre": "Irish Movies",
           "id": 58750,
-          "emoji":"🇮🇪"
+          "emoji": "🇮🇪"
         },
         {
           "genre": "Italian Movies",
           "id": 8221,
-          "emoji":"🇮🇹"
+          "emoji": "🇮🇹"
         },
         {
           "genre": "Japanese Movies",
           "id": 10398,
-          "emoji":"🇯🇵"
+          "emoji": "🇯🇵"
         },
         {
           "genre": "Korean Movies",
           "id": 5685,
-          "emoji":"🇰🇷"
+          "emoji": "🇰🇷"
         },
         {
           "genre": "Latin American Movies",
@@ -588,7 +588,7 @@
         {
           "genre": "New Zealand Movies",
           "id": 63782,
-          "emoji":"🇳🇿"
+          "emoji": "🇳🇿"
         },
         {
           "genre": "Romantic Foreign Movies",
@@ -597,7 +597,7 @@
         {
           "genre": "Russian Movies",
           "id": 11567,
-          "emoji":"🇷🇺"
+          "emoji": "🇷🇺"
         },
         {
           "genre": "Scandinavian Movies",
@@ -610,7 +610,7 @@
         {
           "genre": "Spanish Movies",
           "id": 58741,
-          "emoji":"🇪🇸"
+          "emoji": "🇪🇸"
         }
       ]
     },
@@ -1027,6 +1027,36 @@
         {
           "genre": "TV Sci-Fi & Fantasy",
           "id": 1372
+        }
+      ]
+    },
+    {
+      "genre": "Other",
+      "id": 0,
+      "subgenres": [
+        {
+          "genre": "90-Minute Movies",
+          "id": 81466194
+        },
+        {
+          "genre": "Based on Books",
+          "id": 9889
+        },
+        {
+          "genre": "Based on Real Life",
+          "id": 920
+        },
+        {
+          "genre": "Heartfelt Movies",
+          "id": 8494
+        },
+        {
+          "genre": "Inspiring Movies",
+          "id": 10619
+        },
+        {
+          "genre": "Suspenseful Movies",
+          "id": 448
         }
       ]
     }
