@@ -35,6 +35,8 @@ function noOccurances(filter, item) {
   );
 }
 
+let setting = "so=yr";
+
 function makePage() {
   const div = document.querySelector(".genres");
   const staticdiv = document.querySelector(".static");
@@ -81,7 +83,7 @@ function makePage() {
       sublink.target = "_blank";
 
       sublink.text = (subarr.emoji || "") + " " + subarr.genre;
-      sublink.href = nfLink + subarr.id;
+      sublink.href = nfLink + subarr.id + "?" + setting;
       sublistitem.appendChild(sublink);
       sublist.appendChild(sublistitem);
     }

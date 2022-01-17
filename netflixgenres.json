@@ -819,12 +819,20 @@
           "id": 4734
         },
         {
+          "genre": "Cyberpunk Movies",
+          "id": 1964512
+        },
+        {
           "genre": "Fantasy Movies",
           "id": 9744
         },
         {
           "genre": "Foreign Sci-Fi & Fantasy",
           "id": 6485
+        },
+        {
+          "genre": "Post Apocalypse",
+          "id": 103975
         },
         {
           "genre": "Sci-Fi Adventure",
@@ -1053,6 +1061,14 @@
         {
           "genre": "Inspiring Movies",
           "id": 10619
+        },
+        {
+          "genre": "Only on Netflix",
+          "id": 839338
+        },
+        {
+          "genre": "Recently Added",
+          "id": 1592210
         },
         {
           "genre": "Suspenseful Movies",
