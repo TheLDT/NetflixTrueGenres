@@ -103,25 +103,27 @@ function makePage() {
   let header = document.querySelector(".header");
   let genres = document.querySelector(".genres");
 
-  fitStatic(header, genres, staticdiv);
+  fitStatic(header, genres, staticdiv, footer);
   window.onresize = (e) => {
     staticdiv.style.height = 100 + "%";
-    fitStatic(header, genres, staticdiv);
+    fitStatic(header, genres, staticdiv, footer);
   };
 }
 
-function fitStatic(header, genres, staticdiv) {
+function fitStatic(header, genres, staticdiv, footer) {
   const searchlistH = document.getElementById("search-list")?.offsetHeight || 0;
   const headerH = header.offsetHeight;
   const genresH = genres.offsetHeight;
-  if (
-    staticdiv.offsetHeight < headerH + genresH ||
-    staticdiv.offsetHeight > headerH + genresH + 50
-  )
-    staticdiv.style.height = headerH + genresH + 50 + "px";
+  const footerH = footer.offsetHeight;
 
-  if (staticdiv.offsetHeight < headerH + searchlistH)
-    staticdiv.style.height = headerH + searchlistH + "px";
+  if (
+    staticdiv.offsetHeight < headerH + genresH + footerH ||
+    staticdiv.offsetHeight > headerH + genresH + footerH + 50
+  )
+    staticdiv.style.height = headerH + genresH + footerH + 50 + "px";
+
+  if (staticdiv.offsetHeight < headerH + searchlistH + footerH)
+    staticdiv.style.height = headerH + searchlistH + footerH + "px";
 
   if (staticdiv.offsetHeight < window.innerHeight)
     staticdiv.style.height = window.innerHeight + "px";
@@ -186,7 +188,8 @@ function autocomplete() {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
         item = document.createElement("DIV");
-        item.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+        item.innerHTML =
+          "<strong>" + arr[i].substr(0, val.length) + "</strong>";
         item.innerHTML += arr[i].substr(val.length);
         item.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
         item.addEventListener("click", function (e) {
@@ -209,7 +212,8 @@ function autocomplete() {
   }
 
   function removeActive(item) {
-    for (let i = 0; i < item.length; i++) item[i].classList.remove("search-active");
+    for (let i = 0; i < item.length; i++)
+      item[i].classList.remove("search-active");
   }
 
   function closeAllLists(elmnt) {

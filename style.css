@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
   --text-color: aliceblue;
   --netflix-red: rgb(229, 9, 20);
   background-color: #1f1f1f;
@@ -32,7 +32,6 @@ body {
   background-size: cover;
   user-select: none;
   animation: animation 1s linear infinite;
-  overflow: hidden;
 }
 
 @keyframes animation {
@@ -67,6 +66,7 @@ body {
   margin: 0 auto;
   width: fit-content;
   font-size: 3rem;
+  text-align: center;
 }
 
 .searchform {
@@ -74,7 +74,8 @@ body {
   grid-template-columns: 1fr 10ch;
   margin: 0 auto;
   width: fit-content;
-  position: relative;
+  position: sticky;
+  top: 1rem;
   z-index: 2;
   height: 2rem;
 }
@@ -92,6 +93,7 @@ body {
 .searchform_text {
   height: 2rem;
   padding-left: 1rem;
+  padding-top: 0.3rem;
   color: var(--netflix-red);
   border-radius: 5rem 0 0 5rem;
 }
@@ -122,12 +124,14 @@ body {
 }
 
 .searchform_submit {
-  height: calc(2rem + 3px);
   width: fit-content;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.3rem;
   color: var(--netflix-red);
   border-radius: 0 5rem 5rem 0;
+  transition: background-color ease-in-out 300ms, color ease-in-out 300ms,
+    box-shadow ease-in-out 500ms;
 }
 
 .search-list {
@@ -148,7 +152,7 @@ body {
   border-bottom: 0.15rem solid black;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: clip;
+  text-overflow: ellipsis;
 }
 
 .search-list div:hover {
@@ -159,6 +163,7 @@ body {
 .genres {
   position: relative;
   display: grid;
+  align-items: start;
   margin: 2rem;
   grid-template-columns: repeat(auto-fill, 20rem);
   grid-gap: 2.5rem;
@@ -179,7 +184,6 @@ body {
 .marker,
 .main-genre {
   text-decoration: none;
-  width: fit-content;
   padding: 1rem;
   border: 0.15rem solid black;
   transition: background-color ease-in-out 300ms, color ease-in-out 300ms,
@@ -190,6 +194,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 2rem;
   font-weight: bold;
+  width: fit-content;
   border-radius: 5rem 0 0 5rem;
   box-shadow: 0px 2px 10px 0px grey, 0px 4px 20px 5px rgb(29, 29, 29);
   color: var(--text-color);
@@ -197,8 +202,9 @@ body {
 }
 
 .main-genre {
-  border-radius: 0 5rem 5rem 0;
+  width: 18ch;
   font-size: 2rem;
+  border-radius: 0 5rem 5rem 0;
   box-shadow: 6px 2px 10px 0px grey, 8px 4px 20px 5px rgb(29, 29, 29);
   color: var(--netflix-red);
   background-color: var(--text-color);
@@ -258,9 +264,6 @@ li::marker {
 .footer {
   display: grid;
   position: fixed;
-
-  /* width: 10vw;
-  height: 18vh; */
   bottom: 0;
   right: 0;
   z-index: 1;
